@@ -8,13 +8,13 @@
 <body>
    
    <main class="centered_container">
-       <section class="sect_img">
+       <section class="sect_img" id="id_img">
           
           <img src="img/mmb.png" alt="mój portret w formie kreskówkowej">
            
        </section>
        
-       <section class="sect_content">
+       <section class="invisible_first" id="id_content_gasa">
            
            <article class="art_gasa">
               
@@ -29,8 +29,10 @@
               </ul>
                
            </article>
-           
-           <article class="art_front">
+       </section>
+          
+          <section class="sect_content_front invisible_first">
+              <article class="art_front">
               
               <p>Junior Front-End Developer - Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere harum mollitia earum, id, consequuntur fugit. Itaque voluptas quam labore incidunt, porro, illo sit alias, odio ea quasi officia voluptatibus, nemo.</p>
               
@@ -42,22 +44,30 @@
               </ul>
                
            </article>
+              
+          </section>
            
-           <article class="art_contact">
+           
+           <section class="sect_content_contact invisible_first">
+               <article class="art_contact">
                m.muchabalcerek@gmail.com
-           </article>
+               </article>
+           </section>
            
-           <nav>
+           
+           <nav class="overlap_nav">
                <ul>
-                   <li>GaSa</li>
-                   <li>front-end</li>
-                   <li>kontakt</li>
+                   <li id="gasa_nav">
+                       GaSa
+                    </li>
+                   <li><a href="">front-end</a></li>
+                   <li><a href="">kontakt</a></li>
                </ul>
            </nav>
-           
-       </section>
        
    </main>
+   
+   <script src="js/script.js"></script>
     
 </body>
 </html>

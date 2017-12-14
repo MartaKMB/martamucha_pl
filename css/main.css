@@ -1,9 +1,32 @@
+/* clean */
+@import url("https://fonts.googleapis.com/css?family=Lato|Permanent+Marker&subset=latin-ext");
 * { margin: 0; padding: 0; }
 
 html { font-size: 10px; }
 
+a { text-decoration: none; color: inherit; display: block; width: 100%; height: 100%; }
+a:hover, a:active { text-decoration: none; color: inherit; }
+
+/* helpers */
+/* styles homepage */
 body { width: 100vw; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
 
-.centered_container { width: 30rem; }
+.centered_container { width: 40rem; height: 50rem; display: flex; }
+
+.invisible_first { display: none; }
+
+.sect_img { display: flex; justify-content: center; align-items: center; }
+.sect_img img { width: auto; height: auto; }
+
+.overlap_nav { writing-mode: vertical-rl; }
+.overlap_nav ul { list-style: none; display: flex; justify-content: center; align-items: stretch; }
+.overlap_nav ul li { font-size: 2rem; font-family: "Permanent Marker", cursive; padding: 1rem; border-bottom-right-radius: 1rem; }
+.overlap_nav ul li:nth-child(1) { background-color: #ff66cc; }
+.overlap_nav ul li:nth-child(2) { background-color: #ccff66; }
+.overlap_nav ul li:nth-child(3) { background-color: #66ccff; }
+.overlap_nav ul li:hover { cursor: pointer; opacity: .7; }
+
+/* content */
+.art_gasa { font-family: "Lato", sans-serif; font-size: 1.6rem; }
 
 /*# sourceMappingURL=main.css.map */
