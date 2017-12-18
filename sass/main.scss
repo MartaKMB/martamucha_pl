@@ -3,24 +3,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     font-size: 10px;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-    
-    display: block;
-    width: 100%;
-    height: 100%;
-    
-    &:hover, &:active {
-        text-decoration: none;
-        color: inherit;
-    }
 }
 
 /* helpers */
@@ -31,9 +18,14 @@ cursive;
 $content_font: 'Lato',
 sans-serif;
 
+/* http://www.color-hex.com/color-palette/175 */
+
 $gasa_bckg_color: #ff66cc;
+$gasa_bckg_color_rgba: rgba(255,102,204, .5);
 $front_bckg_color: #ccff66;
+$front_bckg_color_rgba: rgba(204,255,102, .5);
 $contact_bckg_color: #66ccff;
+$contact_bckg_color_rgba: rgba(102,204,255, .5);
 
 /* styles homepage */
 
@@ -46,8 +38,8 @@ body {
 }
 
 .centered_container {
-    width: 40rem;
-    height: 50rem;
+    width: 70vw;
+    height: 40rem;
 
     display: flex;
 }
@@ -56,10 +48,32 @@ body {
     display: none;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    padding: .2rem;
+    
+    display: inline-block;
+    width: auto;
+    height: auto;
+    
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    
+    &:hover, &:active {
+        text-decoration: underline;
+        color: inherit;
+        background-color: rgba(250,250,250, .4);
+    }
+}
+
 .sect_img {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    width: 100%;
+    
     
     img {
         width: auto;
@@ -69,7 +83,8 @@ body {
 
 .overlap_nav {
     writing-mode: vertical-rl;
-
+    
+    border-left: 1px solid black;
 
     ul {
         list-style: none;
@@ -109,7 +124,88 @@ body {
 
 /* content */
 
-.art_gasa {
+section {
+    width: 100%;
+    height: 100%;
+    
+    -webkit-box-shadow: 0px .4px 4px .4px rgba(1,2,1,0.5);
+    box-shadow: 0px .4px 4px .4px rgba(1,2,1,0.5);
+}
+
+.art_content {
     font-family: $content_font;
     font-size: 1.6rem;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+    padding: 1rem;
+    
+    ul {
+        list-style: none;
+        
+        li {
+            border-left: .1rem solid #000000;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            
+            a {
+           font-family: $overlap_font;
+        }
+        }
+        
+        
+    }
 }
+
+.art_gasa {
+    background-color: $gasa_bckg_color_rgba;
+}
+
+.art_front {
+    background-color: $front_bckg_color_rgba;
+    
+    ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+        width: 100%;
+        
+        li {
+            flex-basis: 25%;
+        }
+    }
+}
+
+.art_contact {
+    background-color: $contact_bckg_color_rgba;
+    font-family: $overlap_font;
+    font-size: 2.4rem;
+    letter-spacing: .3rem;
+    
+    width: 100%;
+    
+    address:hover {
+        border-bottom-left-radius: .5rem;
+        border-bottom-right-radius: .5rem;
+        padding: .6rem;
+        background-color: rgba(250,250,250, .4);
+    }
+}
+
+@media (max-width: 700px) {
+    .centered_container {
+        height: 70vh;
+        width: 80vw;
+    }
+    
+    .art_contact {
+        font-size: 1.8rem;
+    }
+}
+
