@@ -67,7 +67,7 @@ body {
 
 .centered_container {
     width: 70vw;
-    height: 40rem;
+    height: 45rem;
 
     display: flex;
     flex-direction: row-reverse;
@@ -173,10 +173,15 @@ section {
     align-items: center;
     flex-wrap: wrap;
 
-    padding: 1rem;
+    padding: 3rem;
 
     ul {
         list-style: none;
+        
+        margin: {
+            top: 1rem;
+            bottom: .5rem;
+        }
 
         li {
             border-left: .1rem solid #000000;
@@ -234,9 +239,10 @@ section {
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .centered_container {
-        height: 70vh;
+        min-height: 70vh;
+        height: auto;
         width: 80vw;
     }
 

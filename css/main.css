@@ -12,7 +12,7 @@ body { width: 100vw; min-height: 100vh; display: flex; justify-content: center; 
 .title_mmb { width: 70vw; padding-bottom: 1rem; font-size: 2rem; font-family: "Lato", sans-serif; letter-spacing: .3rem; color: #424142; }
 .title_mmb:hover { cursor: pointer; opacity: .7; }
 
-.centered_container { width: 70vw; height: 40rem; display: flex; flex-direction: row-reverse; }
+.centered_container { width: 70vw; height: 45rem; display: flex; flex-direction: row-reverse; }
 
 h2 { display: none; }
 
@@ -33,8 +33,8 @@ a:hover, a:active { text-decoration: underline; color: inherit; background-color
 /* content */
 section { width: 100%; height: 100%; -webkit-box-shadow: 0px 0.4px 4px 0.4px rgba(1, 2, 1, 0.5); box-shadow: 0px 0.4px 4px 0.4px rgba(1, 2, 1, 0.5); }
 
-.art_content { font-family: "Lato", sans-serif; font-size: 1.6rem; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 1rem; }
-.art_content ul { list-style: none; }
+.art_content { font-family: "Lato", sans-serif; font-size: 1.6rem; width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; flex-wrap: wrap; padding: 3rem; }
+.art_content ul { list-style: none; margin-top: 1rem; margin-bottom: .5rem; }
 .art_content ul li { border-left: .1rem solid #000000; margin-bottom: 1rem; padding-left: 1rem; }
 .art_content ul li a { font-family: "Permanent Marker", cursive; }
 
@@ -47,7 +47,7 @@ section { width: 100%; height: 100%; -webkit-box-shadow: 0px 0.4px 4px 0.4px rgb
 .art_contact { display: none; background-color: rgba(102, 204, 255, 0.5); font-family: "Permanent Marker", cursive; font-size: 2.4rem; letter-spacing: .3rem; width: 100%; }
 .art_contact address:hover { border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem; padding: .6rem; background-color: rgba(250, 250, 250, 0.4); }
 
-@media (max-width: 700px) { .centered_container { height: 70vh; width: 80vw; }
+@media (max-width: 768px) { .centered_container { min-height: 70vh; height: auto; width: 80vw; }
   .art_contact { font-size: 1.8rem; } }
 
 /*# sourceMappingURL=main.css.map */
