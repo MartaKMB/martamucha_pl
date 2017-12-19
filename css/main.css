@@ -7,7 +7,10 @@ html { font-size: 10px; }
 /* helpers */
 /* http://www.color-hex.com/color-palette/175 */
 /* styles homepage */
-body { width: 100vw; min-height: 100vh; display: flex; justify-content: center; align-items: center; }
+body { width: 100vw; min-height: 100vh; display: flex; justify-content: center; align-content: center; flex-wrap: wrap; }
+
+.title_mmb { width: 70vw; padding-bottom: 1rem; font-size: 2rem; font-family: "Lato", sans-serif; letter-spacing: .3rem; color: #424142; }
+.title_mmb:hover { cursor: pointer; opacity: .7; }
 
 .centered_container { width: 70vw; height: 40rem; display: flex; }
 

@@ -27,6 +27,8 @@ $front_bckg_color_rgba: rgba(204,255,102, .5);
 $contact_bckg_color: #66ccff;
 $contact_bckg_color_rgba: rgba(102,204,255, .5);
 
+$gray_color: #424142;
+
 /* styles homepage */
 
 body {
@@ -34,7 +36,24 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.title_mmb {
+    width: 70vw;
+    padding: {
+        bottom: 1rem;
+    } 
+    font-size: 2rem;
+    font-family: $content_font;
+    letter-spacing: .3rem;
+    color: $gray_color;
+    
+    &:hover {
+                cursor: pointer;
+                opacity: .7;
+            }
 }
 
 .centered_container {

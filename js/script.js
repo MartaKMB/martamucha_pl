@@ -1,4 +1,5 @@
 /* navigation */
+const titleMMB = document.querySelector('#title_mmb');
 const gasaNav = document.querySelector('#gasa_nav');
 const frontNav = document.querySelector('#front_nav');
 const contactNav = document.querySelector('#contact_nav');
@@ -11,6 +12,15 @@ const idContact = document.querySelector('#id_contact');
 
 
 /* events */
+
+titleMMB.addEventListener('click', (e) => {
+    idFront.style.display = 'none';
+    idContact.style.display = 'none';
+    idGasa.style.display = 'none';
+    
+//    idImg.style.display = 'block';
+    document.querySelector('.sect_img').style.display = 'flex';
+});
 
 gasaNav.addEventListener('click', (e) => {
     idImg.style.display = 'none';
