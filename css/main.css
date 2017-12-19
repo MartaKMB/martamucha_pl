@@ -12,9 +12,9 @@ body { width: 100vw; min-height: 100vh; display: flex; justify-content: center; 
 .title_mmb { width: 70vw; padding-bottom: 1rem; font-size: 2rem; font-family: "Lato", sans-serif; letter-spacing: .3rem; color: #424142; }
 .title_mmb:hover { cursor: pointer; opacity: .7; }
 
-.centered_container { width: 70vw; height: 40rem; display: flex; }
+.centered_container { width: 70vw; height: 40rem; display: flex; flex-direction: row-reverse; }
 
-.invisible_first { display: none; }
+h2 { display: none; }
 
 a { text-decoration: none; color: inherit; padding: .2rem; display: inline-block; width: auto; height: auto; border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem; }
 a:hover, a:active { text-decoration: underline; color: inherit; background-color: rgba(250, 250, 250, 0.4); }
@@ -38,13 +38,13 @@ section { width: 100%; height: 100%; -webkit-box-shadow: 0px 0.4px 4px 0.4px rgb
 .art_content ul li { border-left: .1rem solid #000000; margin-bottom: 1rem; padding-left: 1rem; }
 .art_content ul li a { font-family: "Permanent Marker", cursive; }
 
-.art_gasa { background-color: rgba(255, 102, 204, 0.5); }
+.art_gasa { display: none; background-color: rgba(255, 102, 204, 0.5); }
 
-.art_front { background-color: rgba(204, 255, 102, 0.5); }
+.art_front { display: none; background-color: rgba(204, 255, 102, 0.5); }
 .art_front ul { display: flex; justify-content: center; align-items: center; width: 100%; }
 .art_front ul li { flex-basis: 25%; }
 
-.art_contact { background-color: rgba(102, 204, 255, 0.5); font-family: "Permanent Marker", cursive; font-size: 2.4rem; letter-spacing: .3rem; width: 100%; }
+.art_contact { display: none; background-color: rgba(102, 204, 255, 0.5); font-family: "Permanent Marker", cursive; font-size: 2.4rem; letter-spacing: .3rem; width: 100%; }
 .art_contact address:hover { border-bottom-left-radius: .5rem; border-bottom-right-radius: .5rem; padding: .6rem; background-color: rgba(250, 250, 250, 0.4); }
 
 @media (max-width: 700px) { .centered_container { height: 70vh; width: 80vw; }

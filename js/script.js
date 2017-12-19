@@ -28,7 +28,7 @@ gasaNav.addEventListener('click', (e) => {
     idContact.style.display = 'none';
     
 //   idGasa.classList.toggle('invisible_first');
-   idGasa.style.display = 'block';
+   idGasa.style.display = 'flex';
 });
 
 frontNav.addEventListener('click', (e) => {
@@ -36,7 +36,7 @@ frontNav.addEventListener('click', (e) => {
     idGasa.style.display = 'none';
     idContact.style.display = 'none';
     
-   idFront.style.display = 'block';
+   idFront.style.display = 'flex';
 });
 
 contactNav.addEventListener('click', (e) => {
@@ -44,5 +44,5 @@ contactNav.addEventListener('click', (e) => {
     idGasa.style.display = 'none';
     idFront.style.display = 'none';
     
-    idContact.style.display = 'block';
+    idContact.style.display = 'flex';
 });
