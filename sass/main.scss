@@ -3,6 +3,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
 }
 
@@ -21,20 +22,11 @@ sans-serif;
 /* http://www.color-hex.com/color-palette/175 */
 
 $gasa_bckg_color: #ff66cc;
-$gasa_bckg_color_rgba: rgba(255,
-102,
-204,
-.5);
+$gasa_bckg_color_rgba: rgba(255,102,204,.5);
 $front_bckg_color: #ccff66;
-$front_bckg_color_rgba: rgba(204,
-255,
-102,
-.5);
+$front_bckg_color_rgba: rgba(204,255,102,.5);
 $contact_bckg_color: #66ccff;
-$contact_bckg_color_rgba: rgba(102,
-204,
-255,
-.5);
+$contact_bckg_color_rgba: rgba(102,204,255,.5);
 
 $gray_color: #424142;
 
@@ -43,9 +35,15 @@ $gray_color: #424142;
 body {
     width: 100vw;
     min-height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -ms-flex-line-pack: center;
     align-content: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 }
 
@@ -69,8 +67,16 @@ body {
     width: 70vw;
     height: 45rem;
 
+    display: -webkit-box;
+
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: wrap-reverse;
+    flex-wrap: wrap-reverse;
 }
 
 h2 {
@@ -98,11 +104,18 @@ a {
 }
 
 .sect_img {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
-
-    width: 100%;
+    
+    width: 93%;
+    background-color: #ffffff;
 
 
     img {
@@ -112,17 +125,28 @@ a {
 }
 
 .overlap_nav {
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
     writing-mode: vertical-rl;
 
-    border-left: 1px solid black;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    
+    width: 7%;
 
     ul {
         list-style: none;
 
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: center;
-        align-items: stretch;
-
+        -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+        align-items: baseline;
 
         li {
 
@@ -131,6 +155,9 @@ a {
             padding: 1rem;
 
             border-bottom-right-radius: 1rem;
+            border-left: 1px solid black;
+            
+            width: 100%;
 
             &:nth-child(1) {
                 background-color: $gasa_bckg_color;
@@ -165,12 +192,19 @@ section {
 .art_content {
     font-family: $content_font;
     font-size: 1.6rem;
-    width: 100%;
+    width: 93%;
     height: 100%;
 
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
 
     padding: 3rem;
@@ -192,8 +226,6 @@ section {
                 font-family: $overlap_font;
             }
         }
-
-
     }
 }
 
@@ -209,13 +241,20 @@ section {
     background-color: $front_bckg_color_rgba;
 
     ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
 
         width: 100%;
 
         li {
+            -ms-flex-preferred-size: 25%;
             flex-basis: 25%;
         }
     }
@@ -228,8 +267,6 @@ section {
     font-family: $overlap_font;
     font-size: 2.4rem;
     letter-spacing: .3rem;
-
-    width: 100%;
 
     address:hover {
         border-bottom-left-radius: .5rem;
@@ -248,5 +285,42 @@ section {
 
     .art_contact {
         font-size: 1.8rem;
+    }
+}
+
+/* for IE10+ */
+
+.for_IE {
+    display: none;
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    
+    .for_IE {
+        display: block;
+        position: fixed;
+        top: 5%;
+        left: 10%;
+        
+        width: 30vw;
+        height: auto;
+        border: 1px solid $gray_color;
+        padding: 2rem;
+        font-size: 1.8rem;
+        font-family: $content_font;
+        
+        background-color: $contact_bckg_color;    
+    }
+    
+    .for_IE_content {
+        display: none;
+        
+        p {
+            padding: 1rem;
+        }
+    }
+        
+    .hover_for_IE:hover .for_IE_content {
+        display: block;
     }
 }
