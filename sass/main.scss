@@ -262,18 +262,31 @@ section {
 
 .art_contact {
     display: none;
+    
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    
+    flex-direction: column;
 
     background-color: $contact_bckg_color_rgba;
     font-family: $overlap_font;
     font-size: 2.4rem;
     letter-spacing: .3rem;
-
-    address:hover {
-        border-bottom-left-radius: .5rem;
-        border-bottom-right-radius: .5rem;
-        padding: .6rem;
-        background-color: rgba(250, 250, 250, .4);
-    }
+    
+    div {
+        color: $gray_color;
+        address{
+            color: #000;
+            margin: 2rem;
+            padding: .6rem;
+            
+            &:hover {
+                background-color: rgba(250, 250, 250, .4);
+            }
+        }
+        
+    } 
 }
 
 @media (max-width: 768px) {
