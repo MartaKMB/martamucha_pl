@@ -262,31 +262,20 @@ section {
 
 .art_contact {
     display: none;
-    
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    
-    flex-direction: column;
 
     background-color: $contact_bckg_color_rgba;
     font-family: $overlap_font;
     font-size: 2.4rem;
     letter-spacing: .3rem;
     
-    div {
-        color: $gray_color;
-        address{
-            color: #000;
-            margin: 2rem;
-            padding: .6rem;
+    address{
+        width: 100%;
+        text-align: center;
             
-            &:hover {
-                background-color: rgba(250, 250, 250, .4);
-            }
+        &:hover {
+            background-color: rgba(250, 250, 250, .4);
         }
-        
-    } 
+    }
 }
 
 @media (max-width: 768px) {
